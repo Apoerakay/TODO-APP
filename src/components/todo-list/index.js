@@ -8,15 +8,22 @@ function TodoList() {
 
 
     return (
-        <ul className="list-group">
-            {todos.map(function (todo, index) {
+        <section>
+            <button className="btn btn-danger"
+                onClick={() => setTodos([])}
+            >
+            Clear Todos</button>
+            <ul className="list-group">
+                {todos.map(function (todo, index) {
 
-                return <TodoItem todo={todo} index={index} />
+                    return <TodoItem todo={todo} index={index} />
 
 
-            })}
+                })}
 
-        </ul>
+            </ul>
+
+        </section>
     );
 }
 
